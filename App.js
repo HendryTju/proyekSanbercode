@@ -14,53 +14,59 @@ import {
   TouchableOpacity,
   FlatList
 } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
-import VideoItem from './Tugas12/components/videoItem';
-import data from './Tugas12/data.json';
+// import Icon from 'react-native-vector-icons/MaterialIcons';
+// import VideoItem from './Tugas12/components/videoItem';
+// import data from './Tugas12/data.json';
+import LoginScreen from './Tugas13/LoginScreen';
+import AboutScreen from './Tugas13/AboutScreen';
 
 export default class App extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <View style={styles.navBar}>
-          <Image source={require('./Tugas12/images/logo.png')} style={{ width: 98, height: 22 }} />
-          <View style={styles.rightNav}>
-            <TouchableOpacity>
-              <Icon style={styles.navItem} name="search" size={25} />
-            </TouchableOpacity>
-            <TouchableOpacity>
-            <Icon style={styles.navItem} name="account-circle" size={25} />
-            </TouchableOpacity>
-          </View>
-        </View>
-        <View style={styles.body}>
-          <FlatList
-          data={data.items}
-          renderItem={(video)=><VideoItem video={video.item} />}
-          keyExtractor={(item)=>item.id}
-          ItemSeparatorComponent={()=><View style={{height:0.5,backgroundColor:'#E5E5E5'}}/>}
+      // <View style={styles.container}>
+      //   <View style={styles.navBar}>
+      //     <Image source={require('./Tugas12/images/logo.png')} style={{ width: 98, height: 22 }} />
+      //     <View style={styles.rightNav}>
+      //       <TouchableOpacity>
+      //         <Icon style={styles.navItem} name="search" size={25} />
+      //       </TouchableOpacity>
+      //       <TouchableOpacity>
+      //       <Icon style={styles.navItem} name="account-circle" size={25} />
+      //       </TouchableOpacity>
+      //     </View>
+      //   </View>
+      //   <View style={styles.body}>
+      //     <FlatList
+      //     data={data.items}
+      //     renderItem={(video)=><VideoItem video={video.item} />}
+      //     keyExtractor={(item)=>item.id}
+      //     ItemSeparatorComponent={()=><View style={{height:0.5,backgroundColor:'#E5E5E5'}}/>}
 
-           />
-        </View>
-        <View style={styles.tabBar}>
-          <TouchableOpacity style={styles.tabItem}>
-            <Icon name="home" size={25}/>
-            <Text style={styles.tabTitle}>Home</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.tabItem}>
-            <Icon name="whatshot" size={25} />
-            <Text style={styles.tabTitle}>Trending</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.tabItem}>
-            <Icon name="subscriptions" size={25} />
-            <Text style={styles.tabTitle}>Subscriptions</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.tabItem}>
-            <Icon name="folder" size={25} />
-            <Text style={styles.tabTitle}>Library</Text>
-          </TouchableOpacity>
-        </View>
-      </View>
+      //      />
+      //   </View>
+      //   <View style={styles.tabBar}>
+      //     <TouchableOpacity style={styles.tabItem}>
+      //       <Icon name="home" size={25}/>
+      //       <Text style={styles.tabTitle}>Home</Text>
+      //     </TouchableOpacity>
+      //     <TouchableOpacity style={styles.tabItem}>
+      //       <Icon name="whatshot" size={25} />
+      //       <Text style={styles.tabTitle}>Trending</Text>
+      //     </TouchableOpacity>
+      //     <TouchableOpacity style={styles.tabItem}>
+      //       <Icon name="subscriptions" size={25} />
+      //       <Text style={styles.tabTitle}>Subscriptions</Text>
+      //     </TouchableOpacity>
+      //     <TouchableOpacity style={styles.tabItem}>
+      //       <Icon name="folder" size={25} />
+      //       <Text style={styles.tabTitle}>Library</Text>
+      //     </TouchableOpacity>
+      //   </View>
+      // </View>
+
+      
+      // <LoginScreen/>
+      <AboutScreen/>
     );
   }
 }
